@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware([
@@ -22,27 +22,29 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
+    Route::get('/', function () {
+        return view('dashboard.index');
     })->name('dashboard');
 
     //INCOMES
-    Route::get('/ingresos',function()
+   
+    Route::get('/ingreso',function()
     {
-      return view('/income/index');
+        return view('crud.income.index');    
     })->name('income');
 
-    //Expenses
-    Route::get('/egresos',function()
-    {
-            return view('/expenses/index');
-    })->name('expenses');
 
-    Route::get('/cajas',function()
+    //EXPENSES
+    Route::get('/egreso',function()
     {
-        return view('moneybox/index');
-    })->name('moneybox');
+        return view('crud.expenses.index');    
+    })->name('expense');
 
+      //BOX MONEY
+      Route::get('/caja',function()
+      {
+          return view('crud.moneybox.index');    
+      })->name('boxmoney');
 
 
 
