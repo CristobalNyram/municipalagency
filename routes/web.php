@@ -33,6 +33,12 @@ Route::middleware([
         return view('crud.income.index');    
     })->name('income');
 
+    Route::get('/profile/settings',function()
+    {
+        return view('profile.settings');    
+    })->name('profile.settings');
+
+
 
     //EXPENSES
     Route::get('/egreso',function()

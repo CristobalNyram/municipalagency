@@ -7,6 +7,14 @@
 @stop
 
 @section('content')
+    <div class="card">
+        <div class="card-header">
+<h3>Reporte del mes: actual</h3>        </div>
+        <dic class="card-body">
+
+        </dic>
+    </div>
+
 
 
 @stop
