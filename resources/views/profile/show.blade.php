@@ -1,11 +1,8 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Perfil')
 
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
 
 @section('content')
 <x-app-layout>

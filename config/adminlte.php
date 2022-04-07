@@ -102,7 +102,7 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'card-outline card-danger',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
@@ -125,7 +125,7 @@ return [
     'classes_brand' => '',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
-    'classes_content_header' => '',
+    'classes_content_header' => 'pl-5 pb-2 pt-2 mt-2 mb-2',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
@@ -168,7 +168,7 @@ return [
     */
 
     'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
+    'right_sidebar_icon' => 'fas fa-money-bill',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
@@ -249,26 +249,55 @@ return [
         [
             'text'        => 'Cajas',
             'url'         => 'caja',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'icon'        => 'fas fa-book'
+            // ,
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ],
         [
             
             'text'        => 'Ingresos',
             'url'         => 'ingreso',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'icon'        => 'fas fa-hand-holding-usd	'
+            // ,
+            // 'label'       => 'Nuevo',
+            // 'label_color' => 'success',
 
         ],
         [
             
             'text'        => 'Egresos',
             'url'         => 'egreso',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'icon'        => 'fas fa-balance-scale-right	'
+            // ,
+            // 'label'       => 'Nuevo',
+            // 'label_color' => 'success',
+
+        ],
+        ['header' => 'Reportes del sistema'],
+        [
+            
+            'text'        => 'Reportes',
+            'url'         => 'reporte',
+            'icon'        => 'fas fa-chart-line',
+            'submenu'     =>
+            [
+            
+                [
+                    'text' => 'Del mes actual',
+                    'url'  => 'reporte/mensual',
+                    'icon' => 'far fa-calendar',
+                ],
+                [
+                    'text' => 'Personalizado',
+                    'url'  => 'reporte/mensual',
+                    'icon' => 'far fa-calendar',
+                ]
+    
+            ]
+            // ,
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ]
         ,
         ['header' => 'Configuración de cuenta'],
