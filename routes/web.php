@@ -25,4 +25,25 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    //INCOMES
+    Route::get('/ingresos',function()
+    {
+      return view('/income/index');
+    })->name('income');
+
+    //Expenses
+    Route::get('/egresos',function()
+    {
+            return view('/expenses/index');
+    })->name('expenses');
+
+    Route::get('/cajas',function()
+    {
+        return view('moneybox/index');
+    })->name('moneybox');
+
+
+
+
 });
