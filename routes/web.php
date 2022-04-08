@@ -43,6 +43,13 @@ Route::middleware([
     {
         return view('crud.income.profile');    
     })->name('income.profile');
+    
+
+    Route::get('/ingreso/buscar',function()
+    {
+        return view('crud.income.search');    
+    })->name('income.search');
+
 
     Route::get('/ingreso/resumen',function()
     {
@@ -69,6 +76,12 @@ Route::middleware([
         return view('crud.expenses.profile');    
     })->name('expense.profile');
 
+    Route::get('/egreso/buscar',function()
+    {
+        return view('crud.expenses.search');    
+    })->name('expense.search');
+    
+
 
     Route::get('/egreso/resumen',function()
     {
@@ -89,6 +102,9 @@ Route::middleware([
       {
           return view('crud.moneybox.profile');    
       })->name('boxmoney.profile');
+
+
+      
 
       Route::get('/caja/resumen',function()
       {

@@ -3,7 +3,7 @@
 @section('title', 'Caja(s)')
 
 @section('content_header')
-   <h1>Cajas</h1>
+   <h1>Cajas <li class="fas fa-book"></li> </h1>
 @stop
 
 @section('content')
@@ -57,6 +57,7 @@
             <table class="table m-0">
             <thead>
             <tr>
+            <th>Acciones</th>
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Estado</th>
@@ -65,6 +66,8 @@
             </thead>
             <tbody>
             <tr>
+            <td><a href="{{ route('boxmoney.profile') }}" class="btn btn-info">Ver mas información</a></td>
+
             <td><a href="{{route('boxmoney.profile')}}">Ramo 28</a></td>
             <td>Dinero que se recibe del gobierno</td>
             <td><span class="badge badge-success">Activa</span></td>

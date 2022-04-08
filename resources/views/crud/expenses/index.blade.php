@@ -3,7 +3,7 @@
 @section('title', 'Egreso(s)')
 
 @section('content_header')
-   <h1>Egresos</h1>
+   <h1>Egresos  <li class="fas fa-balance-scale-right"></li></h1>
 @stop
 
 @section('content')
@@ -34,7 +34,8 @@
             <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-search"></i></span>
                     <div class="info-box-content">
-                    <span class="info-box-text">Buscar gasto </span>
+                    
+                    <a href="{{route('expense.search')}}"><span class="info-box-text">Buscar gasto </span></a>
                     <span class="info-box-number">
                     </span>
             </div>
@@ -71,6 +72,7 @@
             <table class="table m-0">
             <thead>
             <tr>
+            <th>Acciones</th>
             <th>Folio</th>   
             <th>Fecha</th>
             <th>Descripción</th>
@@ -82,6 +84,8 @@
             </thead>
             <tbody>
             <tr>
+            <td><a href="{{ route('expense.profile') }}" class="btn btn-info">Ver mas información</a></td>
+
             <td><a  href="{{ route('expense.profile') }}">1</a></td>
             <td>04/04/2022</td>
             <td><a  href="{{ route('expense.profile') }}"> Compra de material tabique </a></td>

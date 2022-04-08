@@ -26,7 +26,7 @@
                             </div>
 
                             <a href="{{route('moneybox.summary')}}" class="small-box-footer"> 
-                                Más info..
+                                Ver más información.
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
                 </div>
@@ -47,7 +47,7 @@
                             </div>
 
                             <a href="{{route('income.summary')}}" class="small-box-footer"> 
-                                Más info..
+                            Ver más información.
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
                 </div>
@@ -69,7 +69,7 @@
                             </div>
 
                             <a href="{{route('expense.summary')}}"class="small-box-footer"> 
-                                Más info..
+                            Ver más información.
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
                 </div>

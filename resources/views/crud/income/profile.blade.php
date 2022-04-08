@@ -5,7 +5,7 @@
 @section('content_header')
   
 
-   <h1>  <a   href="{{ route('income') }}" class="btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-left"></i></a>  Ingresos</h1>
+   <h1>  <a   href="{{ route('income') }}" class="btn btn-danger btn-floating btn-lg"><i class="fas fa-arrow-left"></i></a>  Ingresos <li class="fas fa-hand-holding-usd" ></li></h1>
 @stop
 
 @section('content')

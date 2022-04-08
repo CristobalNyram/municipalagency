@@ -3,7 +3,7 @@
 @section('title', 'Ingreso(s)')
 
 @section('content_header')
-   <h1>Ingresos</h1>
+   <h1>Ingresos <li class="fas fa-hand-holding-usd" ></li></h1> 
 @stop
 
 @section('content')
@@ -32,7 +32,7 @@
             <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-search"></i></span>
                     <div class="info-box-content">
-                    <span class="info-box-text">Buscar ingreso</span>
+                    <a href="{{route('income.search')}}"><span class="info-box-text">Buscar ingreso </span></a>
                     <span class="info-box-number">
                     </span>
             </div>
@@ -68,6 +68,7 @@
             <table class="table m-0">
             <thead>
             <tr>
+            <th>Acciones</th>   
             <th>Folio</th>   
             <th>Fecha</th>
             <th>Descripción</th>
@@ -79,6 +80,7 @@
             </thead>
             <tbody>
             <tr>
+            <td><a href="{{ route('income.profile') }}" class="btn btn-info">Ver mas información</a></td>
             <td><a  href="{{ route('income.profile') }}">1</a></td>
             <td>04/04/2022</td>
             <td> <a  href="{{ route('income.profile') }}">Dinero de municipio</a> </td>
