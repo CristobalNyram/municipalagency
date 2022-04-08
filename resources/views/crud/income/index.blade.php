@@ -16,7 +16,7 @@
             <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-plus"></i></span>
                     <div class="info-box-content">
-                    <span class="info-box-text">Regitrar</span>
+                    <a href="#income_dd-modal" data-target="#income_add-modal" data-toggle="modal"><span>Regitrar ingreso</span></a>
                     <span class="info-box-number">
                     </span>
             </div>
@@ -32,7 +32,7 @@
             <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-search"></i></span>
                     <div class="info-box-content">
-                    <span class="info-box-text">Buscar</span>
+                    <span class="info-box-text">Buscar ingreso</span>
                     <span class="info-box-number">
                     </span>
             </div>
@@ -50,13 +50,8 @@
             
 
         </div>
-        
 
-    </div>
-
-    
-    
-    <div class="card">
+        <div class="card">
 <div class="card-header border-transparent">
 <h3 class="card-title">Ultiimos ingresos registrados</h3>
 <div class="card-tools">
@@ -73,18 +68,20 @@
             <table class="table m-0">
             <thead>
             <tr>
+            <th>Folio</th>   
             <th>Fecha</th>
             <th>Descripción</th>
             <th>Responsable</th>
-            <th>Caja</th>
+            <th>Caja afectada</th>
             <th>Comprobante</th>
             <th>Cantidad</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-            <td><a href="pages/examples/invoice.html">Coperaciones de los residentes</a></td>
-            <td>Es una coperación de los residentes</td>
+            <td><a  href="{{ route('income.profile') }}">1</a></td>
+            <td>04/04/2022</td>
+            <td> <a  href="{{ route('income.profile') }}">Dinero de municipio</a> </td>
             
             <td>Gerardo</td>
             <td>Ramo 28</td>
@@ -104,6 +101,13 @@
 
 </div>
 
+        
+
+    </div>
+
+    
+    
+   
 
 </section>
     
@@ -111,6 +115,31 @@
     
 
 </section>
+
+
+
+
+
+<div class="modal fade" id="income_add-modal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Regitrar ingreso </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> folio : #</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar registro</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 @stop
 
 @section('css')

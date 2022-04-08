@@ -22,6 +22,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+
+    Route::get('/profile/settings',function()
+    {
+        return view('profile.settings');    
+    })->name('profile.settings');
+
     Route::get('/', function () {
         return view('dashboard.index');
     })->name('dashboard');
@@ -33,10 +39,12 @@ Route::middleware([
         return view('crud.income.index');    
     })->name('income');
 
-    Route::get('/profile/settings',function()
+    Route::get('/ingreso/profile/1',function()
     {
-        return view('profile.settings');    
-    })->name('profile.settings');
+        return view('crud.income.profile');    
+    })->name('income.profile');
+
+ 
 
 
 
@@ -46,11 +54,24 @@ Route::middleware([
         return view('crud.expenses.index');    
     })->name('expense');
 
+    
+    Route::get('/egreso/profile/1',function()
+    {
+        return view('crud.expenses.profile');    
+    })->name('expense.profile');
+
+
       //BOX MONEY
       Route::get('/caja',function()
       {
           return view('crud.moneybox.index');    
       })->name('boxmoney');
+
+      Route::get('/caja/profile',function()
+      {
+          return view('crud.moneybox.profile');    
+      })->name('boxmoney.profile');
+
 
 
 

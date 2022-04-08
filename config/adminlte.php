@@ -247,6 +247,14 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'        => 'Tablero informativo',
+            'url'         => '/',
+            'icon'        => 'fas fa-home'
+            // ,
+            // 'label'       => 4,
+            // 'label_color' => 'success',
+        ],
+        [
             'text'        => 'Cajas',
             'url'         => 'caja',
             'icon'        => 'fas fa-book'
@@ -278,7 +286,6 @@ return [
         [
             
             'text'        => 'Reportes',
-            'url'         => 'reporte',
             'icon'        => 'fas fa-chart-line',
             'submenu'     =>
             [
