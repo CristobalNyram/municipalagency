@@ -33,7 +33,7 @@
             <tr>
             <th>Nombre</th>
             <th>Fecha de registro</th>
-            <th>Descricion</th>
+            <th>Descripción</th>
             <th>Estado</th>
             <th>Dinero en caja</th>
             </tr>

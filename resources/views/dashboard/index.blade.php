@@ -25,7 +25,7 @@
                                 <i class="ion ion-bag"></i>
                             </div>
 
-                            <a href="" class="small-box-footer"> 
+                            <a href="{{route('moneybox.summary')}}" class="small-box-footer"> 
                                 Más info..
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
@@ -46,7 +46,7 @@
                                 <i class="ion ion-bag"></i>
                             </div>
 
-                            <a href="" class="small-box-footer"> 
+                            <a href="{{route('income.summary')}}" class="small-box-footer"> 
                                 Más info..
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
@@ -68,7 +68,7 @@
                                 <i class="ion ion-bag"></i>
                             </div>
 
-                            <a href="" class="small-box-footer"> 
+                            <a href="{{route('expense.summary')}}"class="small-box-footer"> 
                                 Más info..
                                 <i href="" class="fas fa-arrow-circle-right"></i>
                             </a>
@@ -93,10 +93,10 @@
                                 <i class="ion ion-bag"></i>
                             </div>
 
-                            <a href="" class="small-box-footer"> 
+                            <!-- <a href="{{route('income.summary')}}" class="small-box-footer"> 
                                 Más info..
                                 <i href="" class="fas fa-arrow-circle-right"></i>
-                            </a>
+                            </a> -->
                 </div>
 
             </div>

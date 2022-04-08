@@ -34,8 +34,8 @@
             <tr>
             <th>Fecha</th>
             <th>Descripción</th>
-            <th>Responsable</th>
-            <th>Caja afectada</th>
+            <th>Responsable del registro</th>
+            <th>Dinero de la caja</th>
             <th>Comprobante</th>
             <th>Cantidad</th>
             </tr>
