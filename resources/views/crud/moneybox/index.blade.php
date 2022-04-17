@@ -65,17 +65,23 @@
             </tr>
             </thead>
             <tbody>
+
+            @foreach($moneyboxes as $moneybox)
             <tr>
             <td><a href="{{ route('boxmoney.profile') }}" class="btn btn-info">Ver mas información</a></td>
 
-            <td><a href="{{route('boxmoney.profile')}}">Ramo 28</a></td>
-            <td>Dinero que se recibe del gobierno</td>
-            <td><span class="badge badge-success">Activa</span></td>
+            <td><a href="{{route('boxmoney.profile')}}">{{$moneybox->monbox_name}}</a></td>
+            <td>{{$moneybox->monbox_description}}</td>
+            @if($moneybox->status==1)
+            <td><span class="badge badge-success">Activado</span></td>
+            @else
+            <td><span class="badge badge-danger">{{$moneybox->status}}</span></td>
+            @endif
             <td>
             <div class="sparkbar" data-color="#00a65a" data-height="20">$1,000.00</div>
             </td>
             </tr>
-          
+            @endforeach
           
         
             </tbody>

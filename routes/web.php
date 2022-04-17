@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MoneyboxController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,6 @@ Route::middleware([
     Route::get('/', function () {
         return view('dashboard.index');
     })->name('dashboard');
-
 
     //INCOMES
    
@@ -94,10 +94,8 @@ Route::middleware([
 
 
       //BOX MONEY----------------------START
-      Route::get('/caja',function()
-      {
-          return view('crud.moneybox.index');    
-      })->name('boxmoney');
+      Route::get('/caja',[MoneyboxController::class,'index'])->name('boxmoney');
+  
 
       Route::get('/caja/profile',function()
       {
@@ -119,3 +117,4 @@ Route::middleware([
 
 
 
+});

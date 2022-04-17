@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIncomeTable extends Migration
+class CreateIncomesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateIncomeTable extends Migration
      */
     public function up()
     {
-        Schema::create('income', function (Blueprint $table) {
+        Schema::create('incomes', function (Blueprint $table) {
             $table->id('inc_id');
             $table->longText('inc_description');
             $table->longText('inc_proof_url');
@@ -23,7 +23,7 @@ class CreateIncomeTable extends Migration
             $table->unsignedBigInteger('id_user');
             $table->timestamps();
 
-            $table->foreign('id_monbox')->references('monbox_id')->on('moneybox')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_monbox')->references('monbox_id')->on('moneyboxes')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

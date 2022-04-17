@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExpenseTable extends Migration
+class CreateExpensesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateExpenseTable extends Migration
      */
     public function up()
     {
-        Schema::create('expense', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->id('exp_id');
             $table->longText('exp_description');
             $table->longText('exp_proof_url');
@@ -23,7 +23,7 @@ class CreateExpenseTable extends Migration
             $table->unsignedBigInteger('id_user');
             $table->timestamps();
 
-            $table->foreign('id_monbox')->references('monbox_id')->on('moneybox')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_monbox')->references('monbox_id')->on('moneyboxes')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

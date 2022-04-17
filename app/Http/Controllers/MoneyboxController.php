@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Moneybox;
 
 class MoneyboxController extends Controller
 {
@@ -13,7 +14,8 @@ class MoneyboxController extends Controller
      */
     public function index()
     {
-        //
+            $moneyBoxes = Moneybox::all();
+            return view('crud.moneybox.index')->with('moneyboxes',$moneyBoxes);
     }
 
     /**
