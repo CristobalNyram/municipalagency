@@ -95,12 +95,10 @@ Route::middleware([
 
       //BOX MONEY----------------------START
       Route::get('/caja',[MoneyboxController::class,'index'])->name('boxmoney');
-  
 
-      Route::get('/caja/profile',function()
-      {
-          return view('crud.moneybox.profile');    
-      })->name('boxmoney.profile');
+      Route::get('/caja/profile/{id}',[MoneyboxController::class,'show'])->name('boxmoney.profile')->where('id', '[0-9]+');;
+
+      
 
 
       

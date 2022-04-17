@@ -46,8 +46,21 @@ class MoneyboxController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        
+        
+        if( $moneybox =Moneybox::find($id))
+        {
+            return view('crud.moneybox.profile')->with('moneybox',$moneybox);
+        }
+        else
+        {
+            return redirect()->route('boxmoney');
+        }
+       
+        
+    
+       
     }
 
     /**

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Moneybox extends Model
 {
+    protected $primaryKey='monbox_id';
     use HasFactory;
 }
