@@ -32,6 +32,7 @@ Route::middleware([
         return view('dashboard.index');
     })->name('dashboard');
 
+
     //INCOMES
    
     Route::get('/ingreso',function()
@@ -118,4 +119,3 @@ Route::middleware([
 
 
 
-});
