@@ -7,6 +7,29 @@
 @stop
 
 @section('content')
+
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded",function (event) {
+
+      const registrerBoxMoneyButton = document.getElementById('registrerboxmoney');
+      
+      
+      registrerBoxMoneyButton.addEventListener('click', event => {
+             
+      });
+
+
+  });
+      
+</script>
+
+
+
+
+
+
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -71,11 +94,11 @@
             <td><a href="caja/profile/{{$moneybox->monbox_id}}" class="btn btn-info">Ver más..<i class="far fa-eye"></i></a></td>
   
             <td><a href="caja/profile/{{$moneybox->monbox_id}}">{{$moneybox->monbox_name}}</a></td>
-            <td>{{$moneybox->monbox_description}}</td>
+            <td><a href="caja/profile/{{$moneybox->monbox_id}}">{{$moneybox->monbox_description}}</a></td>
             @if($moneybox->status==1)
-            <td><span class="badge badge-success">Activado</span></td>
+            <td><span class="badge badge-success">Activo</span></td>
             @else
-            <td><span class="badge badge-danger">Desactivada</span></td>
+            <td><span class="badge badge-danger">Desactivo</span></td>
             @endif
             <td>
             <div class="sparkbar" data-color="#00a65a" data-height="20">$1,000.00</div>
@@ -104,7 +127,10 @@
 
 <div class="modal fade" id="moneybox_add-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
+  <form action="">
   <div class="modal-dialog" role="document">
+
+
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Regitrar caja</h4>
@@ -125,10 +151,13 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-indigo bg-success">Registrar <i class="fas fa-paper-plane-o ml-1"></i></button>
+        <button id="registrerboxmoney" class="btn btn-indigo bg-success">Registrar <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
+
     </div>
+
   </div>
+  </form>
 </div>
 
 <!-- END MODALS-------------------------------------------------------------------------------------------------------END MODALS MODALS -->

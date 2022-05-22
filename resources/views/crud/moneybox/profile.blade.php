@@ -47,7 +47,7 @@
             <td>{{$moneybox->monbox_description}}</td>
 
             @if($moneybox->status==1)
-            <td><span class="badge badge-success">Activa</span></td>
+            <td><span class="badge badge-success">Activo</span></td>
             @else
             <td><span class="badge badge-danger">Desactivada</span></td>
             @endif
